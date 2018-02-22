@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    tools:context="com.example.android.calculator.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/finaloutput_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/numbers"
+            android:paddingBottom="17dp"
+            android:paddingTop="17dp"
+            android:text="0"
+            android:textColor="#000000"
+            android:textDirection="ltr"
+            android:textSize="55sp" />
+
+        <EditText
+            android:id="@+id/output_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/finaloutput_view"
+            android:background="@color/numbers"
+            android:enabled="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:lines="1"
+            android:maxLines="2"
+            android:paddingBottom="17dp"
+            android:textColor="#000000"
+            android:textDirection="rtl"
+            android:textSize="50sp" />
+
+        <LinearLayout
+            android:id="@+id/firstline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/output_view"
+            android:background="#bd8700"
+            android:orientation="horizontal"
+
+            >
+
+            <Button
+                android:id="@+id/del_button"
+                style="@style/overall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="DEL" />
+
+            <Button
+                android:id="@+id/clr_button"
+                style="@style/overall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="CLR" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/secondline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/firstline"
+            android:background="@color/delclr"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/seven_button"
+                style="@style/overall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/eight_button"
+                style="@style/overall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/nine_button"
+                style="@style/overall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="9" />
+
+            <Button
+                android:id="@+id/div_button"
+                style="@style/operations"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/operations"
+                android:text="/" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/thirdline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/secondline"
+            android:background="@color/delclr"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/four_button"
+                style="@style/overall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="4" />
+
+
+            <Button
+                android:id="@+id/five_button"
+                style="@style/overall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/six_button"
+                style="@style/overall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="6" />
+
+            <Button
+                android:id="@+id/mul_button"
+                style="@style/operations"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/operations"
+                android:text="*" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/fourthline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/thirdline"
+            android:background="@color/delclr"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/one_button"
+                style="@style/overall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="1" />
+
+
+            <Button
+                android:id="@+id/two_button"
+                style="@style/overall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/three_button"
+                style="@style/overall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/minus_button"
+                style="@style/operations"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/operations"
+                android:text="-" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/fifthline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fourthline"
+            android:background="@color/delclr"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/dot_button"
+                style="@style/overall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="." />
+
+            <Button
+                android:id="@+id/zero_button"
+                style="@style/overall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/equal_button"
+                style="@style/overall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="=" />
+
+            <Button
+                android:id="@+id/plus_button"
+                style="@style/operations"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/operations"
+                android:text="+" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/messageline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/fifthline"
+            android:background="#d9de9b"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/message_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:hint="Type Your Message"
+                android:inputType="textAutoComplete|textAutoCorrect"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/send_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_button"
+                android:text="SEND"
+                android:textColor="@color/numbers" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>
+
